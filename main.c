@@ -4,25 +4,33 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	char str[100];
-	int num = 0;
-	char c;
-
 	
-	printf("input a string : ");
+	int answer = 59;
+	int x;
+	int num=0;
 	
-	
-	while ((c=getchar()) != '\n')
+	do
 	{
+	printf("Guess a number : ");
+	scanf("%d", &x);
 		
-	if('0'<=c && c<='9')
+	if(x<59)
 	{
-	 num++;
+	printf("low!!\n");
+	num++;
 	}
 	
+	else if(x>59)
+	{
+	printf("high!!\n");
+	num++;
 	}
 	
-	printf("The number of digits is %d", num);
-	
+	else
+	{
+	printf("Congratulation! trials: %d \n", num);
+	}
+	}
+	while (x != 59);
 	return 0;
-}
+	}
