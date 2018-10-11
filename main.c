@@ -11,15 +11,12 @@ int main(int argc, char *argv[]) {
 	
 	if(x>0)
 	{
-	printf("양수입니다. \n");
+	printf("%d.\n", x);
 	}
-	else if(x==0)
-	{
-	printf("0 입니다.\n");
-	}
+		
 	else
 	{
-	printf("음수입니다.\n");
+	printf("%d.\n", -x);
 	}
 	return 0;
 }
