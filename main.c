@@ -4,19 +4,28 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int x;
+	char x;
 	
-	printf("정수 하나를 입력하시오 : ");
-	scanf("%d", &x);
+	printf("input a char : ");
+	scanf("%c", &x);
 	
-	if(x>0)
+	if('A'<=x && x<='Z')
 	{
-	printf("%d.\n", x);
+	printf("이것은 대문자 입니다.\n");
 	}
 		
+	else if('a'<=x && x<'z')
+	{
+	printf("이것은 소문자 입니다.\n");
+	}
+	
+	else if('0'<= x && x<='9')
+	{
+		printf("이것은 숫자 입니다.\n");
+	}
 	else
 	{
-	printf("%d.\n", -x);
+		printf("이것은 기타글자  입니다.\n");
 	}
 	return 0;
 }
